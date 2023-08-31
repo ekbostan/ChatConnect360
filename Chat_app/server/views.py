@@ -8,7 +8,7 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.exceptions import AuthenticationFailed
 from django.db.models import Count
 from .schema import server_list_docs
-from 
+from rest_framework.permissions import IsAuthenticated
 
 # Create a viewset for handling server list operations
 
@@ -16,6 +16,7 @@ from
 class ServerListViewSet(viewsets.ViewSet):
     # Set the initial queryset to include all Server objects
     queryset = Server.objects.all()
+    permission_classes = [IsAuthenticated]
 
     # Define the list method to handle GET requests for the server list
     @server_list_docs
