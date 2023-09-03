@@ -5,6 +5,12 @@ from .models import Category, Server, Channel
 # Serializer for Channel model
 
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = "__all__"
+
+
 class ChannelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Channel
@@ -19,6 +25,7 @@ class ServerSerializer(serializers.ModelSerializer):
 
     # Nested serializer to serialize related Channel objects
     channel_server = ChannelSerializer(many=True)
+    category = serializers.StringRelatedField()
 
     class Meta:
         model = Server
