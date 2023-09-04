@@ -1,5 +1,6 @@
 # Import necessary modules for creating serializers
 from rest_framework import serializers
+
 from .models import Category, Server, Channel
 
 # Serializer for Channel model
