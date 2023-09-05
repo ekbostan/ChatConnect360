@@ -1,55 +1,67 @@
-import { useState } from "react";
-import useWebSocket from "react-use-websocket";
-
-const socketUrl = "ws://127.0.0.1:8000/ws/test";
+import { Box, CssBaseline } from "@mui/material";
+import PrimaryAppBar from "./PrimaryAppBar";
+import PrimaryDraw from "./PrimaryDraw";
+import SecondaryDraw from "./SecondaryDraw";
+import Main from "./main";
+import MessageInterface from "../components/Main/MessageInterface";
+import ServerChannels from "../components/SecondaryDraw/ServerChannels";
+import UserServers from "../components/PrimaryDraw/UserServers";
+import { useParams, useNavigate } from "react-router-dom";
+import { Server } from "../@types/server.d";
+import useCrud from "../hooks/useCrud";
+import { useEffect } from "react";
 
 const Server = () => {
-  const [newMessage, setNewMessage] = useState<string[]>([]);
-  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
+  const { serverId, channelId } = useParams();
 
-  const { sendJsonMessage } = useWebSocket(socketUrl, {
-    onOpen: () => {
-      console.log("Connected!");
-    },
-    onClose: () => {
-      console.log("Closed!");
-    },
-    onError: () => {
-      console.log("Error!");
-    },
-    onMessage: (msg) => {
-      const data = JSON.parse(msg.data);
-      setNewMessage((prev_msg) => [...prev_msg, data.new_message]);
-    },
-  });
+  const { dataCRUD, error, isLoading, fetchData } = useCrud<Server>(
+    [],
+    `/server/select/?by_serverid=${serverId}`
+  );
+
+  if (error !== null && error.message === "400") {
+    navigate("/");
+    return null;
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  // Check if the channelId is valid by searching for it in the data fetched from the API
+  const isChannel = (): Boolean => {
+    if (!channelId) {
+      return true;
+    }
+
+    return dataCRUD.some((server) =>
+      server.channel_server.some(
+        (channel) => channel.id === parseInt(channelId)
+      )
+    );
+  };
+
+  useEffect(() => {
+    if (!isChannel()) {
+      navigate(`/server/${serverId}`);
+    }
+  }, [isChannel, channelId]);
 
   return (
-    <div>
-      {newMessage.map((msg, index) => {
-        return (
-          <div key={index}>
-            <p>{msg}</p>
-          </div>
-        );
-      })}
-      <form>
-        <label>
-          Enter Message:
-          <input
-            type="text"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </label>
-      </form>
-      <button
-        onClick={() => {
-          sendJsonMessage({ type: "message", message });
-        }}
-      >
-        Send Message
-      </button>
-    </div>
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <PrimaryAppBar />
+      <PrimaryDraw>
+        <UserServers open={false} data={dataCRUD} />
+      </PrimaryDraw>
+      <SecondaryDraw>
+        <ServerChannels data={dataCRUD} />
+      </SecondaryDraw>
+      <Main>
+        <MessageInterface />
+      </Main>
+    </Box>
   );
 };
 export default Server;
