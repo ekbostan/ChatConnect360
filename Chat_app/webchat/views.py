@@ -18,4 +18,3 @@ class MessageViewSet(viewsets.ViewSet):
             return Response(serializer.data)
         except Conversation.DoesNotExist:
             return Response([])
-
