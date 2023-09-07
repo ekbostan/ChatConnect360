@@ -11,8 +11,6 @@ During this development journey, I was responsible for crafting an innovative me
 - **Optimized Database Design**: I implemented an optimized SQL relational database design, harnessing Django's ORM capabilities to ensure data integrity, security, scalability, and high-performance data storage solutions.
 
 ## Technology Stack
-For the frontend code, visit our [Frontend Reposit](link-to-frontend-repo).
-For the backend code, visit our [Backend Repository](link-to-backend-repo).
 - [Frontend](https://github.com/ekbostan/ChatConnect360/tree/main/React_frontend): React and Material-UI
 - [Backend](https://github.com/ekbostan/ChatConnect360/tree/main/Chat_app): Django REST Framework and uvicorn FastAPI
 - Database: SQL (Optimized with Django ORM)
