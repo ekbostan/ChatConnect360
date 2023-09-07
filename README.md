@@ -22,7 +22,10 @@ To begin exploring ChatConnect360 and experience the future of real-time communi
 ### User Register & Sign In
 <div style="display: flex; justify-content: space-between;">
     <div style="flex: 1;">
-        <img width="1000"  alt="Screenshot 2023-09-06 at 9 31 11 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/cb79b350-8074-4e10-86fb-73e8dc939116">        
+        <img width="1000"  alt="Screenshot 2023-09-06 at 9 31 11 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/cb79b350-8074-4e10-86fb-73e8dc939116">
+        In this section, users can register and sign in to ChatConnect360. The image shows the user interface for this process, where users can create their accounts and log in to access the messaging platform. This is the initial step to start using ChatConnect360.
+
+
     </div>
 </div>
 
