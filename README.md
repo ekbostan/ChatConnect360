@@ -15,7 +15,9 @@ During this development journey, I was responsible for crafting an innovative me
 To begin exploring ChatConnect360 and experience the future of real-time communication and server management.
 
 ### Create an Account
-<img width="1576" alt="Screenshot 2023-09-06 at 9 31 11 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/cb79b350-8074-4e10-86fb-73e8dc939116">
+<img width="1000" alt="Screenshot 2023-09-06 at 9 31 11 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/cb79b350-8074-4e10-86fb-73e8dc939116">
+
+### Login To Server
 
 ## Contributions
 
