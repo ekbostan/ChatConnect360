@@ -4,11 +4,26 @@
 ## Project Highlights
 During this development journey, I was responsible for crafting an innovative messaging platform that seamlessly integrates RESTful APIs with powerful technologies like Django REST Framework (DRF), React, and Material-UI, resulting in an immersive and efficient messaging experience.
 
-**Key Achievements:**
+## Key Achievements
 
-- **Robust Chat Server Administration API**: I designed and developed a robust chat server administration API, equipped with advanced features such as server filtering, channel management, related data retrieval, secure authentication, WebSocket support, and seamless integration with external APIs through uvicorn FastAPI.
+### Robust Chat Server Administration API
+- **Server Filtering**: Designed and implemented a server filtering feature for easy search and filtering of chat servers based on various criteria.
+- **Channel Management**: Developed comprehensive channel management functionality for creating, editing, and organizing channels within chat servers.
+- **Related Data Retrieval**: Implemented efficient retrieval of related data, enhancing usability.
+- **Secure Authentication**: Ensured secure authentication with token-based login, registration, and WebSocket authentication.
+- **WebSocket Support**: Integrated WebSocket support for real-time communication and notifications.
+- **External API Integration**: Seamlessly integrated external APIs with CORS handling.
 
-- **Optimized Database Design**: I implemented an optimized SQL relational database design, harnessing Django's ORM capabilities to ensure data integrity, security, scalability, and high-performance data storage solutions.
+### Optimized Database Design
+- Utilized Django's ORM for an optimized SQL relational database design, ensuring data integrity, security, and scalability.
+
+### Django Project Development
+- Developed Django projects with RESTful APIs using Django REST Framework (DRF).
+- Efficiently managed project source control with Git and version control systems.
+
+### Front-End Development
+- Created visually appealing front-end interfaces using React, React Router, and Material-UI for a seamless user experience.
+
 
 ## Technology Stack
 - [Frontend](https://github.com/ekbostan/ChatConnect360/tree/main/React_frontend): React and Material-UI
