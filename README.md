@@ -24,7 +24,7 @@ To begin exploring ChatConnect360 and experience the future of real-time communi
 <img width="1000"  alt="Screenshot 2023-09-06 at 9 31 11 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/cb79b350-8074-4e10-86fb-73e8dc939116">
 <br><br>
 <br><br>
-<br><br>
+
 
 In this section, users can register and sign in to ChatConnect360. The image shows the user interface for this process, where users can create their accounts and log in to access the messaging platform. This is the initial step to start using ChatConnect360.
 
@@ -33,7 +33,7 @@ In this section, users can register and sign in to ChatConnect360. The image sho
 <img width="1000" alt="Screenshot 2023-09-06 at 8 25 16 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/b9a9c440-238c-4141-84b0-07aef4afac14">
 <br><br>
 <br><br>
-<br><br>
+
 
 This section allows users to join a server within ChatConnect360. The image showcases the server joining process, where users can explore and select different servers or communities to become a part of. Joining a server enables users to engage in conversations and interactions with other members of that specific server.
 
@@ -42,7 +42,7 @@ This section allows users to join a server within ChatConnect360. The image show
 <img width="1000" alt="Screenshot 2023-09-06 at 10 07 05 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/14b050c3-03cf-41f6-88a8-1dce0180cc3c">
 <br><br>
 <br><br>
-<br><br>
+
 
 Once users have registered, signed in, and joined a server, they can start chatting with other members. The image represents the chat interface of ChatConnect360, where users can exchange messages, join channels or chat rooms, and engage in real-time conversations with fellow users within the selected server.
 
