@@ -2,7 +2,8 @@
 
 
 ## Project Highlights
-![Uploading Screenshot 2023-09-06 at 8.25.16 PM.png…]()
+<img width="1670" alt="Screenshot 2023-09-06 at 8 25 16 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/b9a9c440-238c-4141-84b0-07aef4afac14">
+
 
 
 
