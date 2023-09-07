@@ -1,4 +1,4 @@
-# ChatConnect360 - University of California, Davis (July 2023 - Aug 2023)
+# ChatConnect360 
 
 
 ## Project Highlights
