@@ -86,7 +86,7 @@ import {
               component="div"
               sx={{ display: { fontWeight: 700, letterSpacing: "-0.5px" } }}
             >
-              DJCHAT
+              ChatConnect360
             </Typography>
           </Link>
           <Box sx={{ flexGrow: 1 }}></Box>

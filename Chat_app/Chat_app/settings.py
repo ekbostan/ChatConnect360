@@ -1,9 +1,11 @@
 import os
+from datetime import timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
 
 load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,13 +15,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG")
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -30,12 +31,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # External
     "drf_spectacular",
     "rest_framework",
     "corsheaders",
+    # Internal
     "account",
     "server",
-    "webchat"
+    "webchat",
 ]
 
 MIDDLEWARE = [
@@ -88,9 +91,15 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator", },
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator", },
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator", },
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
 ]
 
 
@@ -124,20 +133,32 @@ AUTH_USER_MODEL = "account.Account"
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_AUTHENTICATION_CLASSES": [
-        # 'rest_framework.authentication.SessionAuthentication',
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
-
+        # "rest_framework.authentication.SessionAuthentication",
+        # "rest_framework_simplejwt.authentication.JWTAuthentication",
+        "account.authenticate.JWTCookieAuthentication",
     ],
 }
+
 SPECTACULAR_SETTINGS = {
     "TITLE": "Your Project API",
     "DESCRIPTION": "Your project description",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": True,
 }
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-]
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+
 CHANNEL_LAYERS = {
     "default": {"BACKEND": "channels.layers.InMemoryChannelLayer"},
+}
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
+    # JWTCookie
+    "ACCESS_TOKEN_NAME": "access_token",
+    "REFRESH_TOKEN_NAME": "refresh_token",
+    "JWT_COOKIE_SAMESITE": "Lax",
 }
