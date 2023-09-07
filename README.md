@@ -16,7 +16,7 @@ To begin exploring ChatConnect360 and experience the future of real-time communi
 ### User Register & Sign In
 <div style="display: flex; justify-content: space-between;">
     <div style="flex: 1;">
-        <img width="1000" height="200"  alt="Screenshot 2023-09-06 at 9 31 11 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/cb79b350-8074-4e10-86fb-73e8dc939116">        
+        <img width="1000"  alt="Screenshot 2023-09-06 at 9 31 11 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/cb79b350-8074-4e10-86fb-73e8dc939116">        
     </div>
 </div>
 
