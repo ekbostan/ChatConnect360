@@ -2,7 +2,7 @@
 <img width="1670" alt="Screenshot 2023-09-06 at 8 25 16 PM" src="https://github.com/ekbostan/ChatConnect360/assets/114015851/b9a9c440-238c-4141-84b0-07aef4afac14">
 
 ## Project Highlights
-During this development journey, I was responsible for crafting an innovative messaging platform that seamlessly integrates RESTful APIs with powerful technologies like Django REST Framework (DRF), React, and Material-UI, resulting in an immersive and efficient messaging experience.
+During this development journey, an innovative messaging platform was crafted, seamlessly integrating RESTful APIs with powerful technologies like Django REST Framework (DRF), React, and Material-UI. This integration resulted in an immersive and efficient messaging experience.
 
 ## Key Achievements
 
