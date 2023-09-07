@@ -9,9 +9,6 @@ During this development journey, I was responsible for crafting an innovative me
 - **Robust Chat Server Administration API**: I designed and developed a robust chat server administration API, equipped with advanced features such as server filtering, channel management, related data retrieval, secure authentication, WebSocket support, and seamless integration with external APIs through uvicorn FastAPI.
 
 - **Optimized Database Design**: I implemented an optimized SQL relational database design, harnessing Django's ORM capabilities to ensure data integrity, security, scalability, and high-performance data storage solutions.
-## Get Started
-
-To begin exploring ChatConnect360 and experience the future of real-time communication and server management.
 
 ## Get Started
 
