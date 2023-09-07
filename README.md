@@ -2,7 +2,7 @@
 
 
 ## Project Highlights
-![Uploading Screenshot 2023-09-06 at 8.25.16 PM.png…]()
+https://github.com/ekbostan/ChatConnect360#:~:text=Screenshot%202023%2D09%2D06%20at%208.25.16%20PM.png
 
 During this development journey, I was responsible for crafting an innovative messaging platform that seamlessly integrates RESTful APIs with powerful technologies like Django REST Framework (DRF), React, and Material-UI, resulting in an immersive and efficient messaging experience.
 
